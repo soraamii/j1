@@ -13,20 +13,26 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Entity
-@Table(name = "tbl_todo2") // 테이블 이름
+@Table(name = "t_board")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 @Getter
-public class Todo {
-  
-  @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-Increament
-  private Long tno;
+@ToString
+public class Board extends BaseEntity {
 
-  @Column(length = 300, nullable = false) // not null
-  private String title; 
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long bno;
+
+  @Column(length = 200, nullable = false)
+  private String title;
+
+  @Column(length = 1000, nullable = false)
+  private String content;
+
+  @Column(length = 50, nullable = false)
+  private String writer;
 
   public void changeTitle(String title) {
     this.title = title;
