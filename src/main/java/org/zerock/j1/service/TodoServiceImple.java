@@ -40,11 +40,12 @@ public class TodoServiceImple implements TodoService {
       .map(todo -> modelMapper.map(todo, TodoDTO.class))
       .collect(Collectors.toList());
 
-    PageResponseDTO<TodoDTO> reponse = new PageResponseDTO<>();
+    // PageResponseDTO<TodoDTO> reponse = new PageResponseDTO<>();
 
-    reponse.setDtoList(dtoList);
+    // reponse.setDtoList(dtoList);
 
-    return reponse;
+    // return reponse;
+    return null;
 
   }
 
