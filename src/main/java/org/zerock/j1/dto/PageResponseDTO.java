@@ -24,12 +24,12 @@ public class PageResponseDTO<E> {
 
     this.dtoList = dtoList;
     this.totalCount = totalCount;
-    this.requestDTO =  requestDTO;
+    this.requestDTO =  pageRequestDTO;
 
     this.page = pageRequestDTO.getPage();
     this.size = pageRequestDTO.getSize();
 
-    // 현재 페이지 번호가 13이면 1.3
+    // 현재 페이지 번호가 13이면 1.3 -> 20
     int tempEnd = (int) (Math.ceil(page / 10.0) * 10);
 
     this.start = tempEnd - 9;
