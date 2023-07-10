@@ -38,7 +38,18 @@ public class Reply {
   // 연관관계를 걸 때는 LAZY를 걸어줘야 함!
   @ManyToOne(fetch = FetchType.LAZY) 
   private Board board;
-  
+
+
+  public void changeText(String text) {
+    this.replyText = text;
+
+  }
+
+  public void changeFile(String fileName) {
+    this.replyFile = fileName;
+
+  }
+
 
 
 }
